@@ -8,11 +8,15 @@ namespace Model
 {
     public class Pessoa
     {
+        public Int64 CPF { get; set; }
+
+        //public int teste;
+
         //private Int32 id;
 
-        public Int32 Id { get; set; }
+        //public Int32 Id { get; set; }
 
-        public String Nome { get; set; }
+        //public String Nome { get; set; }
 
         /*public Int32 Id
         {

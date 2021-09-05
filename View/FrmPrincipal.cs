@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace View
 {
@@ -14,7 +15,9 @@ namespace View
     {
         public FrmPrincipal()
         {
+            //FrmCadPessoa form = new FrmCadPessoa();
             FrmLogin form = new FrmLogin();
+
             this.Visible = false;
             form.ShowDialog();
             this.Visible = true;
@@ -34,15 +37,21 @@ namespace View
 
             //this.Visible = true;
 
-            //MessageBox.Show("passou!!");
+            //MessageBox.Show("Chegou aqui!!!");
         }
 
         /*private void MensagemNaTela(object sender, EventArgs e)
         {
+            MessageBox.Show("Novo método funcionando!!");
+            Pessoa p = new Pessoa();
+
             int a = 2;
             int b = 3;
             int res = a + b;
-            MessageBox.Show("Resutado " + res);
+            p.CPF = res;
+
+            //MessageBox.Show("Resutado " + res);
+            MessageBox.Show("CPF: " + p.CPF);
         }*/
 
         private void btncancel_Click(object sender, EventArgs e)
