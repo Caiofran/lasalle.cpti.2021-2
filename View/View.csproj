@@ -79,6 +79,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,6 +102,18 @@
       <Project>{7b881a80-eefb-49be-9cbf-feb79776f13f}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2-lasallerj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-lasallerj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2-lasallerj1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

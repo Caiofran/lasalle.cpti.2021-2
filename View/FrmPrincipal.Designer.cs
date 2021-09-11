@@ -44,8 +44,13 @@ namespace View
             this.imSair = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.ajudarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.barraTarefas = new System.Windows.Forms.ToolStrip();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.brBtnCadastrar = new System.Windows.Forms.ToolStripButton();
             this.barraStatus.SuspendLayout();
             this.menuPrincipal.SuspendLayout();
+            this.barraTarefas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // barraStatus
@@ -101,7 +106,7 @@ namespace View
             this.ajudarToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(1215, 28);
+            this.menuPrincipal.Size = new System.Drawing.Size(1215, 30);
             this.menuPrincipal.TabIndex = 1;
             this.menuPrincipal.Text = "menuPrincipal";
             // 
@@ -113,53 +118,88 @@ namespace View
             this.toolStripSeparator1,
             this.imSair});
             this.imArquivo.Name = "imArquivo";
-            this.imArquivo.Size = new System.Drawing.Size(75, 24);
+            this.imArquivo.Size = new System.Drawing.Size(75, 26);
             this.imArquivo.Text = "&Arquivo";
             // 
             // imAbrir
             // 
             this.imAbrir.Name = "imAbrir";
             this.imAbrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.imAbrir.Size = new System.Drawing.Size(224, 26);
+            this.imAbrir.Size = new System.Drawing.Size(182, 26);
             this.imAbrir.Text = "Abrir";
             // 
             // imSalvar
             // 
             this.imSalvar.Name = "imSalvar";
             this.imSalvar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.imSalvar.Size = new System.Drawing.Size(224, 26);
+            this.imSalvar.Size = new System.Drawing.Size(182, 26);
             this.imSalvar.Text = "Salvar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
             // 
             // imSair
             // 
             this.imSair.Name = "imSair";
             this.imSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.imSair.Size = new System.Drawing.Size(224, 26);
+            this.imSair.Size = new System.Drawing.Size(182, 26);
             this.imSair.Text = "Sair";
             this.imSair.Click += new System.EventHandler(this.imSair_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(23, 24);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(23, 26);
             this.toolStripMenuItem1.Text = "&";
             // 
             // ajudarToolStripMenuItem
             // 
             this.ajudarToolStripMenuItem.Name = "ajudarToolStripMenuItem";
-            this.ajudarToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.ajudarToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
             this.ajudarToolStripMenuItem.Text = "&Ajudar";
+            // 
+            // barraTarefas
+            // 
+            this.barraTarefas.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barraTarefas.ImageScalingSize = new System.Drawing.Size(40, 40);
+            this.barraTarefas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.brBtnCadastrar});
+            this.barraTarefas.Location = new System.Drawing.Point(0, 30);
+            this.barraTarefas.Name = "barraTarefas";
+            this.barraTarefas.Size = new System.Drawing.Size(45, 575);
+            this.barraTarefas.TabIndex = 2;
+            this.barraTarefas.Text = "toolStrip1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::View.Properties.Resources.logo2_lasallerj1;
+            this.pictureBox1.InitialImage = global::View.Properties.Resources.logo_lasallerj;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1170, 575);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // brBtnCadastrar
+            // 
+            this.brBtnCadastrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.brBtnCadastrar.Image = global::View.Properties.Resources.user_add;
+            this.brBtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.brBtnCadastrar.Name = "brBtnCadastrar";
+            this.brBtnCadastrar.Size = new System.Drawing.Size(42, 44);
+            this.brBtnCadastrar.Text = "Adicionar";
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1215, 631);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.barraTarefas);
             this.Controls.Add(this.barraStatus);
             this.Controls.Add(this.menuPrincipal);
             this.MainMenuStrip = this.menuPrincipal;
@@ -170,6 +210,9 @@ namespace View
             this.barraStatus.PerformLayout();
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
+            this.barraTarefas.ResumeLayout(false);
+            this.barraTarefas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +237,9 @@ namespace View
         private System.Windows.Forms.ToolStripMenuItem imSair;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem ajudarToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip barraTarefas;
+        private System.Windows.Forms.ToolStripButton brBtnCadastrar;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
         #endregion
 

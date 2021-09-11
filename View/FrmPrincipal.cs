@@ -79,7 +79,7 @@ namespace View
 
         private void imSair_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
