@@ -62,6 +62,8 @@ namespace View
             if (formLogin.ShowDialog() == DialogResult.OK)
             {
                 //this.Visible = true;
+                User u = (User)formLogin.Tag;
+                itbUsuarioLogado.Text = u.Usuario; 
                 this.Show();
             }
             else

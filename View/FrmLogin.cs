@@ -28,6 +28,7 @@ namespace View
             if (ValidarLogin(user))
             {
                 this.DialogResult = DialogResult.OK;
+                this.Tag = user;
                 this.Close();
             }
             else
@@ -53,6 +54,30 @@ namespace View
             }
 
             return resultado;
+        }
+
+        private void txbUsuario_TextChanged(object sender, EventArgs e)
+        {
+            lblMsg.Visible = false;
+        }
+
+        private void txbSenha_TextChanged(object sender, EventArgs e)
+        {
+            lblMsg.Visible = false;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            switch (keyData)
+            {
+                case Keys.Enter:
+                    btnLogin_Click(null, null);
+                    break;
+                case Keys.Escape:
+                    this.Close();
+                    break;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

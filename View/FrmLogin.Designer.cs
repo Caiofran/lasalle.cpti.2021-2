@@ -44,6 +44,7 @@ namespace View
             this.txbUsuario.Size = new System.Drawing.Size(194, 22);
             this.txbUsuario.TabIndex = 1;
             this.txbUsuario.Text = "caio";
+            this.txbUsuario.TextChanged += new System.EventHandler(this.txbUsuario_TextChanged);
             // 
             // txbSenha
             // 
@@ -53,6 +54,7 @@ namespace View
             this.txbSenha.Size = new System.Drawing.Size(194, 22);
             this.txbSenha.TabIndex = 2;
             this.txbSenha.Text = "caio";
+            this.txbSenha.TextChanged += new System.EventHandler(this.txbSenha_TextChanged);
             // 
             // label1
             // 
