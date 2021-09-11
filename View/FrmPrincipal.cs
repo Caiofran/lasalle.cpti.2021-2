@@ -16,16 +16,10 @@ namespace View
         public FrmPrincipal()
         {
             //FrmCadPessoa form = new FrmCadPessoa();
-            FrmLogin form = new FrmLogin();
-
-            this.Visible = false;
-            form.ShowDialog();
-            this.Visible = true;
-
             InitializeComponent();
         }
 
-        private void btnok_Click(object sender, EventArgs e)
+        /*private void btnok_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Você apertou no botão ok");
             FrmCadPessoa form = new FrmCadPessoa();
@@ -38,7 +32,7 @@ namespace View
             //this.Visible = true;
 
             //MessageBox.Show("Chegou aqui!!!");
-        }
+        }*/
 
         /*private void MensagemNaTela(object sender, EventArgs e)
         {
@@ -54,10 +48,26 @@ namespace View
             MessageBox.Show("CPF: " + p.CPF);
         }*/
 
-        private void btncancel_Click(object sender, EventArgs e)
+        /*private void btncancel_Click(object sender, EventArgs e)
         {
 
-        }
+        }*/
 
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+            FrmLogin formLogin = new FrmLogin();
+            //this.Visible = false;
+            this.Hide();
+
+            if (formLogin.ShowDialog() == DialogResult.OK)
+            {
+                //this.Visible = true;
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
+        }
     }
 }

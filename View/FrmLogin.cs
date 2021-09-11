@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Model;
 
 namespace View
 {
@@ -15,6 +16,43 @@ namespace View
         public FrmLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Usuario = txbUsuario.Text;
+            user.Senha = txbSenha.Text;
+
+            //validando o usuario
+            if (ValidarLogin(user))
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            else
+            {
+                lblMsg.Visible = true;
+            }
+        }
+
+        private bool ValidarLogin(User _user)
+        {
+            bool resultado = false;
+
+            try
+            {
+                if (_user.Usuario.Equals("caio") && _user.Senha.Equals("caio"))
+                {
+                    resultado = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO AO EFETUAR LOGIN: " + ex.Message);
+            }
+
+            return resultado;
         }
     }
 }
