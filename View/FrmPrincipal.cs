@@ -71,5 +71,15 @@ namespace View
                 this.Close();
             }
         }
+
+        private void tHora_Tick(object sender, EventArgs e)
+        {
+            itbHora.Text = DateTime.Now.ToLongTimeString();
+        }
+
+        private void imSair_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
