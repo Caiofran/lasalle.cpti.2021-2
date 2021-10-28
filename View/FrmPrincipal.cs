@@ -13,57 +13,22 @@ namespace View
 {
     public partial class FrmPrincipal : Form
     {
+        //private Dictionary<Int64, Pessoa> mapaPessoas;
         public FrmPrincipal()
         {
-            //FrmCadPessoa form = new FrmCadPessoa();
             InitializeComponent();
+            //mapaPessoas = new Dictionary<Int64, Pessoa>();
         }
-
-        /*private void btnok_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Você apertou no botão ok");
-            FrmCadPessoa form = new FrmCadPessoa();
-
-            //this.Visible = false;
-
-            //form.Show();
-            form.ShowDialog();
-
-            //this.Visible = true;
-
-            //MessageBox.Show("Chegou aqui!!!");
-        }*/
-
-        /*private void MensagemNaTela(object sender, EventArgs e)
-        {
-            MessageBox.Show("Novo método funcionando!!");
-            Pessoa p = new Pessoa();
-
-            int a = 2;
-            int b = 3;
-            int res = a + b;
-            p.CPF = res;
-
-            //MessageBox.Show("Resutado " + res);
-            MessageBox.Show("CPF: " + p.CPF);
-        }*/
-
-        /*private void btncancel_Click(object sender, EventArgs e)
-        {
-
-        }*/
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             FrmLogin formLogin = new FrmLogin();
-            //this.Visible = false;
             this.Hide();
 
             if (formLogin.ShowDialog() == DialogResult.OK)
             {
-                //this.Visible = true;
                 User u = (User)formLogin.Tag;
-                itbUsuarioLogado.Text = u.Usuario; 
+                itbUsuarioLogado.Text = u.Usuario;
                 this.Show();
             }
             else
@@ -77,9 +42,34 @@ namespace View
             itbHora.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tHora.Enabled = true;
+        }
+
         private void imSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void brBtnCadastrar_Click(object sender, EventArgs e)
+        {
+            FrmCadPessoa form = new FrmCadPessoa();
+
+            form.ShowDialog();
+
+            //Pessoa p = (Pessoa)form.Tag;
+
+            //mapaPessoas.Add(p.CPF, p);
+        }
+
+        private void brBtnListarPessoas_Click(object sender, EventArgs e)
+        {
+            FrmListaDePessoas f = new FrmListaDePessoas();
+
+            //f.Tag = mapaPessoas;
+
+            f.ShowDialog();
         }
     }
 }

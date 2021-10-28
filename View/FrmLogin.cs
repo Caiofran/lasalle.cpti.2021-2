@@ -24,11 +24,12 @@ namespace View
             user.Usuario = txbUsuario.Text;
             user.Senha = txbSenha.Text;
 
-            //validando o usuario
             if (ValidarLogin(user))
             {
                 this.DialogResult = DialogResult.OK;
+
                 this.Tag = user;
+
                 this.Close();
             }
             else
@@ -43,7 +44,7 @@ namespace View
 
             try
             {
-                if (_user.Usuario.Equals("caio") && _user.Senha.Equals("caio"))
+                if (_user.Usuario.Equals("thiago") && _user.Senha.Equals("thiago"))
                 {
                     resultado = true;
                 }
@@ -54,6 +55,11 @@ namespace View
             }
 
             return resultado;
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void txbUsuario_TextChanged(object sender, EventArgs e)
@@ -77,6 +83,7 @@ namespace View
                     this.Close();
                     break;
             }
+
             return base.ProcessCmdKey(ref msg, keyData);
         }
     }

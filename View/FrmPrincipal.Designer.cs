@@ -42,11 +42,11 @@ namespace View
             this.imSalvar = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.imSair = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.barraTarefas = new System.Windows.Forms.ToolStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.brBtnCadastrar = new System.Windows.Forms.ToolStripButton();
+            this.brBtnListarPessoas = new System.Windows.Forms.ToolStripButton();
             this.barraStatus.SuspendLayout();
             this.menuPrincipal.SuspendLayout();
             this.barraTarefas.SuspendLayout();
@@ -55,40 +55,39 @@ namespace View
             // 
             // barraStatus
             // 
-            this.barraStatus.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.barraStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.itbUsuarioLogado,
             this.toolStripStatusLabel2,
             this.itbHora});
-            this.barraStatus.Location = new System.Drawing.Point(0, 605);
+            this.barraStatus.Location = new System.Drawing.Point(0, 505);
             this.barraStatus.Name = "barraStatus";
-            this.barraStatus.Size = new System.Drawing.Size(1215, 26);
+            this.barraStatus.Size = new System.Drawing.Size(1060, 22);
             this.barraStatus.TabIndex = 0;
             this.barraStatus.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(117, 20);
-            this.toolStripStatusLabel1.Text = "Usuário Logado:";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(96, 17);
+            this.toolStripStatusLabel1.Text = "Usuário Logado: ";
             // 
             // itbUsuarioLogado
             // 
             this.itbUsuarioLogado.Name = "itbUsuarioLogado";
-            this.itbUsuarioLogado.Size = new System.Drawing.Size(117, 20);
-            this.itbUsuarioLogado.Text = "Usuário Logado:";
+            this.itbUsuarioLogado.Size = new System.Drawing.Size(86, 17);
+            this.itbUsuarioLogado.Text = "usuarioLogado";
             // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(13, 20);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(10, 17);
             this.toolStripStatusLabel2.Text = "|";
             // 
             // itbHora
             // 
             this.itbHora.Name = "itbHora";
-            this.itbHora.Size = new System.Drawing.Size(63, 20);
+            this.itbHora.Size = new System.Drawing.Size(49, 17);
             this.itbHora.Text = "00:00:00";
             // 
             // tHora
@@ -99,16 +98,14 @@ namespace View
             // 
             // menuPrincipal
             // 
-            this.menuPrincipal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.imArquivo,
-            this.toolStripMenuItem1,
-            this.ajudarToolStripMenuItem});
+            this.ajudaToolStripMenuItem});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(1215, 30);
+            this.menuPrincipal.Size = new System.Drawing.Size(1060, 24);
             this.menuPrincipal.TabIndex = 1;
-            this.menuPrincipal.Text = "menuPrincipal";
+            this.menuPrincipal.Text = "menuStrip1";
             // 
             // imArquivo
             // 
@@ -118,68 +115,62 @@ namespace View
             this.toolStripSeparator1,
             this.imSair});
             this.imArquivo.Name = "imArquivo";
-            this.imArquivo.Size = new System.Drawing.Size(75, 26);
-            this.imArquivo.Text = "&Arquivo";
+            this.imArquivo.Size = new System.Drawing.Size(61, 20);
+            this.imArquivo.Text = "A&rquivo";
             // 
             // imAbrir
             // 
             this.imAbrir.Name = "imAbrir";
             this.imAbrir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.imAbrir.Size = new System.Drawing.Size(182, 26);
+            this.imAbrir.Size = new System.Drawing.Size(145, 22);
             this.imAbrir.Text = "Abrir";
             // 
             // imSalvar
             // 
             this.imSalvar.Name = "imSalvar";
             this.imSalvar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.imSalvar.Size = new System.Drawing.Size(182, 26);
+            this.imSalvar.Size = new System.Drawing.Size(145, 22);
             this.imSalvar.Text = "Salvar";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(179, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(142, 6);
             // 
             // imSair
             // 
             this.imSair.Name = "imSair";
             this.imSair.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.imSair.Size = new System.Drawing.Size(182, 26);
+            this.imSair.Size = new System.Drawing.Size(145, 22);
             this.imSair.Text = "Sair";
             this.imSair.Click += new System.EventHandler(this.imSair_Click);
             // 
-            // toolStripMenuItem1
+            // ajudaToolStripMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(23, 26);
-            this.toolStripMenuItem1.Text = "&";
-            // 
-            // ajudarToolStripMenuItem
-            // 
-            this.ajudarToolStripMenuItem.Name = "ajudarToolStripMenuItem";
-            this.ajudarToolStripMenuItem.Size = new System.Drawing.Size(67, 26);
-            this.ajudarToolStripMenuItem.Text = "&Ajudar";
+            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
+            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajudaToolStripMenuItem.Text = "&Ajuda";
             // 
             // barraTarefas
             // 
             this.barraTarefas.Dock = System.Windows.Forms.DockStyle.Left;
             this.barraTarefas.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.barraTarefas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.brBtnCadastrar});
-            this.barraTarefas.Location = new System.Drawing.Point(0, 30);
+            this.brBtnCadastrar,
+            this.brBtnListarPessoas});
+            this.barraTarefas.Location = new System.Drawing.Point(0, 24);
             this.barraTarefas.Name = "barraTarefas";
-            this.barraTarefas.Size = new System.Drawing.Size(45, 575);
+            this.barraTarefas.Size = new System.Drawing.Size(45, 481);
             this.barraTarefas.TabIndex = 2;
             this.barraTarefas.Text = "toolStrip1";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::View.Properties.Resources.logo2_lasallerj1;
-            this.pictureBox1.InitialImage = global::View.Properties.Resources.logo_lasallerj;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 30);
+            this.pictureBox1.Image = global::View.Properties.Resources.logo2_lasallerj;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1170, 575);
+            this.pictureBox1.Size = new System.Drawing.Size(1015, 481);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -191,20 +182,33 @@ namespace View
             this.brBtnCadastrar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.brBtnCadastrar.Name = "brBtnCadastrar";
             this.brBtnCadastrar.Size = new System.Drawing.Size(42, 44);
-            this.brBtnCadastrar.Text = "Adicionar";
+            this.brBtnCadastrar.Text = "Adicionar novo usuário!";
+            this.brBtnCadastrar.Click += new System.EventHandler(this.brBtnCadastrar_Click);
+            // 
+            // brBtnListarPessoas
+            // 
+            this.brBtnListarPessoas.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.brBtnListarPessoas.Image = global::View.Properties.Resources.user_list;
+            this.brBtnListarPessoas.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.brBtnListarPessoas.Name = "brBtnListarPessoas";
+            this.brBtnListarPessoas.Size = new System.Drawing.Size(42, 44);
+            this.brBtnListarPessoas.Text = "Listar Pessoas";
+            this.brBtnListarPessoas.Click += new System.EventHandler(this.brBtnListarPessoas_Click);
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1215, 631);
+            this.ClientSize = new System.Drawing.Size(1060, 527);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.barraTarefas);
             this.Controls.Add(this.barraStatus);
             this.Controls.Add(this.menuPrincipal);
             this.MainMenuStrip = this.menuPrincipal;
             this.Name = "FrmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aplicação de Exemplo de Aula";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.barraStatus.ResumeLayout(false);
             this.barraStatus.PerformLayout();
@@ -218,10 +222,7 @@ namespace View
 
         }
 
-        public void Teste(int _param)
-        {
-
-        }
+        #endregion
 
         private System.Windows.Forms.StatusStrip barraStatus;
         private System.Windows.Forms.ToolStripStatusLabel itbUsuarioLogado;
@@ -235,16 +236,11 @@ namespace View
         private System.Windows.Forms.ToolStripMenuItem imSalvar;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem imSair;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem ajudarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.ToolStrip barraTarefas;
         private System.Windows.Forms.ToolStripButton brBtnCadastrar;
         private System.Windows.Forms.PictureBox pictureBox1;
-
-        #endregion
-
-        //private System.Windows.Forms.Button btnok;
-        //private System.Windows.Forms.Button btncancel;
+        private System.Windows.Forms.ToolStripButton brBtnListarPessoas;
     }
 }
 

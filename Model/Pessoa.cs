@@ -10,23 +10,26 @@ namespace Model
     {
         public Int64 CPF { get; set; }
 
-        //public int teste;
+        public String Nome { get; set; }
 
-        //private Int32 id;
+        public String Email { get; set; }
 
-        //public Int32 Id { get; set; }
+        public String Cel { get; set; }
 
-        //public String Nome { get; set; }
+        public DateTime Nascimento { get; set; }
 
-        /*public Int32 Id
-        {
-            get;
-            set;
-        }*/
+        public String Profissão { get; set; }
 
-        //objeto.Id = valor;
-        //var = objeto.Id;
+        public String Sexo { get; set; }
 
-        ///public void setId(Int32 _valor)
+        public String EstadoCivil { get; set; }
+
+        public Boolean Filhos { get; set; }
+
+        public Boolean Animais { get; set; }
+
+        public Boolean Fumante { get; set; }
+
+        public Endereco Endereco { get; set; }
     }
 }
